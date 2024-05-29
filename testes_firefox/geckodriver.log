@@ -1,0 +1,15 @@
+1716231841216	geckodriver	INFO	Listening on 127.0.0.1:56884
+1716231844106	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56885" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofilemeMFgW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1716231845303	Marionette	INFO	Marionette enabled
+1716231845441	Marionette	INFO	Listening on port 56894
+WebDriver BiDi listening on ws://127.0.0.1:56885
+Read port: 56894
+1716231845640	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56885/devtools/browser/82fafb49-5e9a-4f44-a333-055ef67bdbcc
+1716231851811	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Exiting due to channel error.
+[GFX1[GFX1-]: CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
+-]: CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
