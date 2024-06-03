@@ -2,11 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
-from webdriver_manager.chrome import ChromeDriverManager
+# from selenium.common.exceptions import NoSuchElementException
+# from webdriver_manager.chrome import ChromeDriverManager
 import time
-import datetime as dt
-import pandas as pd
+
 
 # Inicialize o driver do Chrome usando o WebDriverManager
 #executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
