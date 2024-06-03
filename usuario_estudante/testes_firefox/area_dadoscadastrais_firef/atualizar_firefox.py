@@ -4,28 +4,27 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-sitefps= os.getenv("DOMAIN")
 driver = webdriver.Firefox()
 driver.maximize_window()
-time.sleep(1.0)
 
-from dotenv import load_dotenv
-
-load_dotenv()
 
 print("-----------------------------------------------------------------")
 print("                 INICIO DOS TESTES AUTOMATIZADOS                 ")
 print("-----------------------------------------------------------------")
 print("\n")
 
-
-driver.get(sitefps)
-time.sleep(1.0)
+# Digitando a URL
+def insertUrl():
+    try:
+        driver.get("https://sso.fps.edu.br/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=https%3A%2F%2Fminhafps.fps.edu.br%2F&state=36f1fb39-09cc-48bb-8c04-34e6f33fcdac&response_mode=fragment&response_type=code&scope=openid&nonce=c40e00d9-64e4-469b-8b76-f6f58d34faa5")
+        time.sleep(1.0)
+        print("-----------------------------------------")
+        print("     Teste URL: Sucesso!!!               ")
+        print("-----------------------------------------")
+    except:
+        print("-----------------------------------------")
+        print("     Teste URL: Falha!!!                 ")
+        print("-----------------------------------------")
 
 
 def insertcpfAndsenha():
@@ -50,7 +49,6 @@ def insertcpfAndsenha():
         print("--------------------------------------------------")
         print("     Teste CPF SENHA: Falha!!!                    ")
         print("--------------------------------------------------")
-
 
 
 def enter():
@@ -103,7 +101,6 @@ def scrollSceen():
         print("--------------------------------------------------")
         print("     Teste DESCER TELA: Falha!!!                  ")
         print("--------------------------------------------------")
-
 
 
 def linkCadastro():
@@ -207,6 +204,7 @@ def backtoLogin():
 
 
 def main():
+    insertUrl()
     insertcpfAndsenha()
     enter()
     termsandConditions()

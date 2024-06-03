@@ -54,7 +54,6 @@ def insertUserpassword():
         print("-----------------------------------------")
 
 
-
 def clickEnter():
     try:
         click_bottom_enter = driver.find_element(By.NAME, "login")
@@ -130,8 +129,6 @@ def numberAndemail():
         campo_numero.send_keys("81999999999")
         time.sleep(1.5)
         campo_numero.send_keys(Keys.TAB)
-
-        
         
         campo_email = driver.find_element(By.XPATH, "//*[@id=\"updateForm\"]/div[2]/input")
         campo_email.click()

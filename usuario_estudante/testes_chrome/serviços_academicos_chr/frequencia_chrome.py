@@ -2,8 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-# from selenium.common.exceptions import NoSuchElementException
-# from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 
@@ -162,36 +160,26 @@ def orderFrequencia():
 """
     #//*[@id="main"]/section/div/div/div/div/div[1]/table/tbody/tr[2]/td[1]
 
-
 def validateFrequencia():
     #limit = dt.datetime.strptime('2024/05/24', '%y%m%d')
     # pace = -1
-
-
     # tabela = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/tbody')
     # time.sleep(1.5)
     datas = []
-    
+   
     try:
         linhas = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/tbody/tr[1]/td[1]')
         texto = linhas.text
         datas.append(texto)
-
-        print(datas)
-        
-
-
+        print(datas)   
     except:
         print("Erro")
-    # print(tabela)
+        print(tabela)
 
-
-         #data = []
-
-        #  for tr in tabela.find_element(By.CLASS_NAME, 'p-datatable-table'):
-        #     row = [item.text for item in tr.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr')]
-        #     data.append(row)"""
-    
+    #data = []
+    #for tr in tabela.find_element(By.CLASS_NAME, 'p-datatable-table'):
+    #row = [item.text for item in tr.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr')]
+    #data.append(row)"""    
 
 
 # Navegando entre a área frequência:
@@ -206,7 +194,6 @@ def navegateFrequencia():
         print("------------------------------------------------------")
         print("     Teste DESCENDO PAGINA: Falha!!!                  ")
         print("------------------------------------------------------")
-
 
 
 # Clicando no botão MENU:

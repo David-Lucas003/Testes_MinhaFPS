@@ -1,7 +1,6 @@
 # TESTE: REALIZANDO ATÉ A TELA ANTERIOR A DA CAPTURA DE FOTO
 # POIS A AUTOMAÇÃO NÃO É CAPAZ DE EXECUTAR ESTA FUNÇÃO ESPECIFICA
 
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys 
@@ -13,10 +12,10 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 time.sleep(2.0)
 
+
 print("---------------------------------------------------------")
 print("           INICIO DOS TESTES AUTOMATIZADOS               ")
 print("---------------------------------------------------------")
-
 
 
 # Digitando a URL
@@ -32,7 +31,6 @@ def validateUrl():
         print("-------------------------------------------------------")
         print("     Teste VALIDAR URL: Falha - URL não encontrada     ")
         print("-------------------------------------------------------")
-
 
 
 # Digitando cpf e senha
@@ -62,7 +60,6 @@ def userandpassword():
         print("-------------------------------------------------------")
 
 
-
 # Clicando em entrar
 def enterHomepage():
     try:        
@@ -77,7 +74,6 @@ def enterHomepage():
         print("------------------------------------------------------")
         print("     Teste ENTRAR: FALHA!!!                           ")
         print("------------------------------------------------------")
-
 
 
 # Termos e Condições
@@ -101,7 +97,6 @@ def acceptTerms():
         print("------------------------------------------------------")
 
 
-
 # 
 def screenScroll():
     try:
@@ -114,7 +109,6 @@ def screenScroll():
         print("------------------------------------------------------")
         print("     Teste ROLAGEM DE PÁGINA: Falha!!!                ")
         print("------------------------------------------------------")
-
 
 
 # Campo cadastro facial
@@ -134,7 +128,6 @@ def linkCad():
         print("------------------------------------------------------")
 
 
-
 # Area Dados Cadastrais
 # Botão Atualizar
 def updateData():
@@ -151,7 +144,6 @@ def updateData():
         print("------------------------------------------------------")
         print("     Teste ATUALIZAR DADOS: Falha!!!                  ")
         print("------------------------------------------------------")
-
 
 
 # Botão Proximo
@@ -175,12 +167,10 @@ def clickNext():
         print("------------------------------------------------------")
 
 
-
 # CONTINUAR OS TESTES DEPOIS DAS ATUALIZAÇÕES!!!!!
 # CONTINUAR OS TESTES DEPOIS DAS ATUALIZAÇÕES!!!!!
 # CONTINUAR OS TESTES DEPOIS DAS ATUALIZAÇÕES!!!!!
 # CONTINUAR OS TESTES DEPOIS DAS ATUALIZAÇÕES!!!!!
-
 
 
 def backUpdate():
@@ -200,11 +190,9 @@ def backUpdate():
         print("------------------------------------------------------")
 
 
-
 # AGUARDANDO ATUALIZAÇÔES PARA NOVOS TESTES:
 # VISUALIZAÇÃO DA FOTO NO CADASTRO FACIAL
 # ALÉM DA FOTO, INFORMAÇÔES COMO DATA E HORA EXATA DO CADASTRO
-
 
 
 def backHomepage():
@@ -224,11 +212,9 @@ def backHomepage():
         print("------------------------------------------------------")
 
 
-
 # AGUARDANDO ATUALIZAÇÔES PARA NOVOS TESTES:
 # VISUALIZAÇÃO DA FOTO NO CADASTRO FACIAL
 # ALÉM DA FOTO, INFORMAÇÔES COMO DATA E HORA EXATA DO CADASTRO
-
 
 
 def bottomExit():
@@ -246,12 +232,10 @@ def bottomExit():
         print("     Teste SAIR: Falha!!!                             ")
         print("------------------------------------------------------")
 
-
  
 # AGUARDANDO ATUALIZAÇÔES PARA NOVOS TESTES:
 # VISUALIZAÇÃO DA FOTO NO CADASTRO FACIAL
 # ALÉM DA FOTO, INFORMAÇÔES COMO DATA E HORA EXATA DO CADASTRO
-
 
 
 def main():
