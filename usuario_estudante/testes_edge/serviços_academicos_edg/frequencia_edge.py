@@ -1,4 +1,6 @@
 from selenium import webdriver 
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.options import Options
@@ -11,6 +13,8 @@ options.add_argument("--enable-chrome-browser-cloud-management")
 driver = webdriver.Edge(options=options)
 driver.maximize_window()
 time.sleep(1.0)
+wait = WebDriverWait(driver, 12.0)
+
 
 # Inicialize o driver do Chrome usando o WebDriverManager
 #executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
@@ -167,7 +171,7 @@ def orderFrequencia():
 # Navegando entre a área frequência:
 def validatetheFrequencia():
     try:
-        driver.execute_script("window.scrollTo(0, 1250);")
+        driver.execute_script("window.scrollTo(0, 1300);")
         time.sleep(1.5)
         print("------------------------------------------------------")
         print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
@@ -178,7 +182,6 @@ def validatetheFrequencia():
         print("------------------------------------------------------")
         
 
-# Clicando no botão MENU:
 def bottomMenu():
     try:
         clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
@@ -193,25 +196,23 @@ def bottomMenu():
     except:
         print("------------------------------------------------------")
         print("     Teste CLICAR MENU: Falha!!!                      ")
-        print("------------------------------------------------------")        
+        print("------------------------------------------------------")
 
 
 # Clicando em SAIR:
 def clickExit():
     try:
-        clicar_sair = driver.find_element(By.CLASS_NAME, "p-submenu-list")
-        time.sleep(1.0)
+        clicar_sair = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "p-submenu-list")))
         clicar_sair.click()
-        time.sleep(1.0)
 
-        print("------------------------------------------------------")
+        print("-----------------------------------------------------")
         print("     Teste CLICAR SAIR: Sucesso!!!                   ")
-        print("------------------------------------------------------")
+        print("-----------------------------------------------------")
 
     except:
-        print("------------------------------------------------------")
-        print("     Teste CLICAR SAIR: Falha!!!                      ")
-        print("------------------------------------------------------") 
+        print("-----------------------------------------------------")
+        print("     Teste CLICAR SAIR: Falha!!!                     ")
+        print("-----------------------------------------------------") 
 
 
 def main():

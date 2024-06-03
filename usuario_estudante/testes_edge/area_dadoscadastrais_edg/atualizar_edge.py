@@ -1,4 +1,6 @@
 from selenium import webdriver 
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.options import Options
@@ -11,25 +13,27 @@ options.add_argument("--enable-chrome-browser-cloud-management")
 driver = webdriver.Edge(options=options)
 driver.maximize_window()
 time.sleep(1.0)
+wait = WebDriverWait(driver, 12.0)
 
 
 
-print("-------------------------------------------------")
-print("        INICIO DOS TESTES AUTOMATIZADOS          ")
-print("-------------------------------------------------")
+
+print("----------------------------------------------")
+print("        INICIO DOS TESTES AUTOMATIZADOS       ")
+print("----------------------------------------------")
 
 
 def checkUrl():
     try:
         driver.get("https://sso.fps.edu.br/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=https%3A%2F%2Fminhafps.fps.edu.br%2F%23%2F&state=b7449b72-e04b-4492-973b-be6316436a43&response_mode=fragment&response_type=code&scope=openid&nonce=a740fa15-f630-4e39-80c3-d28ab85147ad")
         time.sleep(1.5)
-        print("-----------------------------------------")
-        print("     Teste CHECK URL: Sucesso!!!         ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CHECK URL: Sucesso!!!           ")
+        print("----------------------------------------------")
     except:
-        print("-----------------------------------------")
-        print("     Teste CHECK URL: Falha!!!           ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CHECK URL: Falha!!!             ")
+        print("----------------------------------------------")
 
 
 def insertUserpassword():
@@ -45,13 +49,13 @@ def insertUserpassword():
         insert_password.send_keys("123")
         time.sleep(1.5)
 
-        print("-----------------------------------------")
-        print("     Teste CPF SENHA: Sucesso!!!         ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CPF SENHA: Sucesso!!!            ")
+        print("----------------------------------------------")
     except:
-        print("-----------------------------------------")
-        print("     Teste CPF SENHA: Falha!!!           ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CPF SENHA: Falha!!!              ")
+        print("----------------------------------------------")
 
 
 def clickEnter():
@@ -60,13 +64,13 @@ def clickEnter():
         time.sleep(1.5)
         click_bottom_enter.click()
         time.sleep(1.5)
-        print("-----------------------------------------")
-        print("     Teste LOGIN: Sucesso!!!             ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste LOGIN: Sucesso!!!                ")
+        print("----------------------------------------------")
     except:
-        print("-----------------------------------------")
-        print("     Teste LOGIN: Falha!!!               ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste LOGIN: Falha!!!                  ")
+        print("----------------------------------------------")
 
 
 def termsConditions():
@@ -80,26 +84,26 @@ def termsConditions():
         time.sleep(1.5)
         click_accept.click()
         time.sleep(2.0)
-        print("-----------------------------------------")
-        print("     Teste TERMOS: Sucesso!!!            ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste TERMOS: Sucesso!!!               ")
+        print("----------------------------------------------")
     except:
-        print("-----------------------------------------")
-        print("     Teste TERMOS: Falha!!!              ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste TERMOS: Falha!!!                 ")
+        print("----------------------------------------------")
 
 
 def scroll():
     try:
         driver.execute_script(f"window.scrollTo(0, 600)")
         time.sleep(2.0)
-        print("-----------------------------------------")
-        print("     Teste BARRA DE ROLAGEM: Sucesso!!!  ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste BARRA DE ROLAGEM: Sucesso!!!     ")
+        print("----------------------------------------------")
     except:
-        print("-----------------------------------------")
-        print("     Teste BARRA DE ROLAGEM: Falha!!!    ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste BARRA DE ROLAGEM: Falha!!!       ")
+        print("----------------------------------------------")
 
 
 #Campo cadastro facial
@@ -109,13 +113,13 @@ def link():
         time.sleep(1.5)
         link.click()
         time.sleep(2.0)
-        print("-----------------------------------------")
-        print("     Teste LINK CADASTRO: Sucesso!!!     ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste LINK CADASTRO: Sucesso!!!        ")
+        print("----------------------------------------------")
     except:
-        print("-----------------------------------------")
-        print("     Teste LINK CADASTRO: Falha!!!       ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste LINK CADASTRO: Falha!!!          ")
+        print("----------------------------------------------")
 
 
 # Area Dados Cadastrais
@@ -137,14 +141,14 @@ def numberAndemail():
         time.sleep(2.0)
         campo_email.send_keys("usuarioteste03@teste.com")
         time.sleep(1.5)
-        print("-----------------------------------------")
-        print("     Teste NUMERO E EMAIL: Sucesso!!!    ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste NUMERO E EMAIL: Sucesso!!!       ")
+        print("----------------------------------------------")
 
     except:
-        print("-----------------------------------------")
-        print("     Teste NUMERO E EMAIL: Falha!!!      ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste NUMERO E EMAIL: Falha!!!         ")
+        print("----------------------------------------------")
 
 
 # botão Atualizar
@@ -154,44 +158,46 @@ def updateBottom():
         time.sleep(1.0)
         update.click()
         time.sleep(2.5)
-        print("-----------------------------------------")
-        print("     Teste BOTÃO ATUALIZAR: Sucesso!!!   ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste BOTÃO ATUALIZAR: Sucesso!!!      ")
+        print("----------------------------------------------")
     except:
-        print("-----------------------------------------")
-        print("     Teste BOTÃO ATUALIZAR: Falha!!!     ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste BOTÃO ATUALIZAR: Falha!!!        ")
+        print("----------------------------------------------")
 
 
-# Clicando no botão sair
-def backBottom():
+def bottomMenu():
     try:
-        bottom_back = driver.find_element(By.LINK_TEXT,"Voltar")
-        time.sleep(1.5)
-        bottom_back.click()
-        time.sleep(2.0)
-        print("-----------------------------------------")
-        print("     TESTE BOTÃO VOLTAR: Sucesso!!!      ")
-        print("-----------------------------------------")
+        clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
+        time.sleep(1.0)
+        clicar_menu.click()
+        time.sleep(1.0)
+
+        print("----------------------------------------------")
+        print("       Teste CLICAR MENU: Sucesso!!!          ")
+        print("----------------------------------------------")
+
     except:
-        print("-----------------------------------------")
-        print("     TESTE BOTÃO VOLTAR: Falha!!!        ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CLICAR MENU: Falha!!!            ")
+        print("----------------------------------------------")
 
 
-def bottomExit():
+# Clicando em SAIR:
+def clickExit():
     try:
-        click_exit = driver.find_element(By.LINK_TEXT,"Sair")
-        time.sleep(1.5)
-        click_exit.click()
-        time.sleep(2.0)
-        print("-----------------------------------------")
-        print("     TESTE BOTÃO SAIR: Sucesso!!!        ")
-        print("-----------------------------------------")
+        clicar_sair = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "p-submenu-list")))
+        clicar_sair.click()
+
+        print("----------------------------------------------")
+        print("       Teste CLICAR SAIR: Sucesso!!!          ")
+        print("----------------------------------------------")
+
     except:
-        print("-----------------------------------------")
-        print("     TESTE BOTÃO SAIR: Falha!!!          ")
-        print("-----------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CLICAR SAIR: Falha!!!            ")
+        print("----------------------------------------------")
 
 def main():
     checkUrl()
@@ -202,16 +208,16 @@ def main():
     link()
     numberAndemail()
     updateBottom()
-    backBottom()
-    bottomExit()
+    bottomMenu()
+    clickExit()
     time.sleep(2.0)
     driver.quit()
     print("\n")
-    print("-------------------------------------------------")
-    print("-------------------------------------------------")
-    print("               FIM DA AUTOMAÇÃO!!!               ")
-    print("-------------------------------------------------")
-    print("-------------------------------------------------")
+    print("----------------------------------------------")
+    print("----------------------------------------------")
+    print("             FIM DA AUTOMAÇÃO!!!              ")
+    print("----------------------------------------------")
+    print("----------------------------------------------")
     exit()
     input()
 
