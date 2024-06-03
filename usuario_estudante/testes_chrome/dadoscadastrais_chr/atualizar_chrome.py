@@ -16,9 +16,9 @@ driver.maximize_window()
 time.sleep(1.5)
 wait = WebDriverWait(driver, 12.0)
 
-print("-------------------------------------------------")
-print("         INICIO DOS TESTES AUTOMATIZADOS         ")
-print("-------------------------------------------------")
+print("-----------------------------------------")
+print("     INICIO DOS TESTES AUTOMATIZADOS     ")
+print("-----------------------------------------")
 
 
 
@@ -28,11 +28,11 @@ def insertUrl():
         driver.get("https://sso.fps.edu.br/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=https%3A%2F%2Fminhafps.fps.edu.br%2F&state=36f1fb39-09cc-48bb-8c04-34e6f33fcdac&response_mode=fragment&response_type=code&scope=openid&nonce=c40e00d9-64e4-469b-8b76-f6f58d34faa5")
         time.sleep(1.0)
         print("-----------------------------------------")
-        print("     Teste URL: Sucesso!!!               ")
+        print("       Teste URL: Sucesso!!!             ")
         print("-----------------------------------------")
     except:
         print("-----------------------------------------")
-        print("     Teste URL: Falha!!!                 ")
+        print("       Teste URL: Falha!!!               ")
         print("-----------------------------------------")
 
 
@@ -54,11 +54,11 @@ def cpfAndpassword():
         
         
         print("-----------------------------------------")
-        print("     Teste CPF E SENHA: Sucesso!!!       ")
+        print("       Teste CPF E SENHA: Sucesso!!!     ")
         print("-----------------------------------------")
     except:
         print("-----------------------------------------")
-        print("     Teste CPF E SENHA: Falha!!!         ")
+        print("       Teste CPF E SENHA: Falha!!!       ")
         print("-----------------------------------------")
 
 
@@ -71,11 +71,11 @@ def enter():
         bottom_enter.click()
         time.sleep(1.5)
         print("-----------------------------------------")
-        print("     Teste LOGIN: Sucesso!!!             ")
+        print("       Teste LOGIN: Sucesso!!!           ")
         print("-----------------------------------------")
     except:
         print("-----------------------------------------")
-        print("     Teste LOGIN: Erro no login!!!       ")
+        print("       Teste LOGIN: Erro no login!!!     ")
         print("-----------------------------------------")
 
 
@@ -83,34 +83,35 @@ def enter():
 # Termos e Condições
 def acceptTerms():
     try:
-        wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "form-check")))
+
         terms_box = driver.find_element(By.CLASS_NAME, "form-check")
         terms_box.click()
+        time.sleep(1.5)
 
-        wait.until(EC.visibility_of_element_located((By.ID, "aceitarTermos")))
         click_accept = driver.find_element(By.ID, "aceitarTermos")
         click_accept.click()
+        time.sleep(1.5)
 
         print("-----------------------------------------")
-        print("     Teste TERMOS: Sucesso!!!            ")
+        print("       Teste TERMOS: Sucesso!!!          ")
         print("-----------------------------------------")
     except:
         print("-----------------------------------------")
-        print("     Teste TERMOS: Falha!!!              ")
+        print("       Teste TERMOS: Falha!!!            ")
         print("-----------------------------------------")
 
 
 
 def scrollScreen():
     try:
-        driver.execute_script(f"window.scrollTo(0, 600)")
+        driver.execute_script(f"window.scrollTo(0, 650)")
         time.sleep(2.0)
         print("-----------------------------------------")
-        print("     Teste BARRA DE ROLAGEM: Sucesso!!!  ")
+        print("       Teste BARRA DE ROLAGEM: Sucesso!!!")
         print("-----------------------------------------")
     except:
         print("-----------------------------------------")
-        print("     Teste BARRA DE ROLAGEM: Falha!!!    ")
+        print("       Teste BARRA DE ROLAGEM: Falha!!!  ")
         print("-----------------------------------------")
 
 
@@ -123,11 +124,11 @@ def clickLink():
         link_cadastro.click()
         time.sleep(1.5)
         print("-----------------------------------------")
-        print("     Teste LINK CADASTRO: Sucesso!!!     ")
+        print("       Teste LINK CADASTRO: Sucesso!!!   ")
         print("-----------------------------------------")
     except:
         print("-----------------------------------------")
-        print("     Teste LINK CADASTRO: Falha!!!       ")
+        print("       Teste LINK CADASTRO: Falha!!!     ")
         print("-----------------------------------------")
 
 
@@ -154,12 +155,12 @@ def insertnumberEmail():
         campo_email.send_keys("usuarioteste03@teste.com")
         time.sleep(1.5)
         print("-----------------------------------------")
-        print("     Teste NUMERO E EMAIL: Sucesso!!!    ")
+        print("       Teste NUMERO E EMAIL: Sucesso!!!  ")
         print("-----------------------------------------")
 
     except:
         print("-----------------------------------------")
-        print("     Teste NUMERO E EMAIL: Falha!!!      ")
+        print("       Teste NUMERO E EMAIL: Falha!!!    ")
         print("-----------------------------------------")
 
 
@@ -174,48 +175,48 @@ def updateBottom():
         update.click()
         time.sleep(2.5)
         print("-----------------------------------------")
-        print("     Teste BOTÃO ATUALIZAR: Sucesso!!!   ")
+        print("       Teste BOTÃO ATUALIZAR: Sucesso!!! ")
         print("-----------------------------------------")
     except:
         print("-----------------------------------------")
-        print("     Teste BOTÃO ATUALIZAR: Falha!!!     ")
+        print("       Teste BOTÃO ATUALIZAR: Falha!!!   ")
         print("-----------------------------------------")
 
 
 
 # AGUARDANDO ATUALIZAÇÕES PARA NOVOS TESTES :
 # ATUALIZAÇÕES DE DADOS (DOCENTE): EMAIL E NÚMERO;
-# Clicando no Botão SAIR
-def backBottom():
+# Clicando no botão MENU:
+def bottomMenu():
     try:
-        bottom_back = driver.find_element(By.LINK_TEXT,"Voltar")
-        time.sleep(1.5)
-        bottom_back.click()
-        time.sleep(2.0)
+        clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
+        time.sleep(1.0)
+        clicar_menu.click()
+        time.sleep(1.0)
+
         print("-----------------------------------------")
-        print("     TESTE BOTÃO VOLTAR: Sucesso!!!      ")
+        print("       Teste CLICAR MENU: Sucesso!!!     ")
         print("-----------------------------------------")
+
     except:
         print("-----------------------------------------")
-        print("     TESTE BOTÃO VOLTAR: Falha!!!        ")
+        print("       Teste CLICAR MENU: Falha!!!       ")
         print("-----------------------------------------")
 
 
-
-# AGUARDANDO ATUALIZAÇÕES PARA NOVOS TESTES :
-# ATUALIZAÇÕES DE DADOS (DOCENTE): EMAIL E NÚMERO;
-def bottomExit():
+# Clicando em SAIR:
+def clickExit():
     try:
-        click_exit = driver.find_element(By.LINK_TEXT,"Sair")
-        time.sleep(1.5)
-        click_exit.click()
-        time.sleep(2.0)
+        clicar_sair = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "p-submenu-list")))
+        clicar_sair.click()
+
         print("-----------------------------------------")
-        print("     TESTE BOTÃO SAIR: Sucesso!!!        ")
+        print("       Teste CLICAR SAIR: Sucesso!!!     ")
         print("-----------------------------------------")
+
     except:
         print("-----------------------------------------")
-        print("     TESTE BOTÃO SAIR: Falha!!!          ")
+        print("       Teste CLICAR SAIR: Falha!!!       ")
         print("-----------------------------------------")
 
 
@@ -229,14 +230,14 @@ def main():
     clickLink()
     insertnumberEmail()
     updateBottom()
-    backBottom()
-    bottomExit()
+    bottomMenu()
+    clickExit()
     time.sleep(2.0)
     driver.quit()
     print("\n")
     print("-----------------------------------------")
     print("-----------------------------------------")
-    print("          FIM DA AUTOMAÇÃO!!!            ")
+    print("           FIM DA AUTOMAÇÃO!!!           ")
     print("-----------------------------------------")
     print("-----------------------------------------")
     exit()

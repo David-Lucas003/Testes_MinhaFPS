@@ -16,22 +16,22 @@ driver.maximize_window()
 wait = WebDriverWait(driver, 20)
 
 
-print("------------------------------------------------------")
-print("           INICIO DOS TESTES AUTOMATIZADOS            ")
-print("------------------------------------------------------")
+print("--------------------------------------------------")
+print("          INICIO DOS TESTES AUTOMATIZADOS        ")
+print("--------------------------------------------------")
 
 
 # Validar sucesso na URL:
 def waitUrl():
     try:
         driver.get("https://sso.fps.edu.br/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=https%3A%2F%2Fminhafps.fps.edu.br%2F&state=204f708e-f5c4-48c1-8005-211abec45d90&response_mode=fragment&response_type=code&scope=openid&nonce=26f9f433-f988-4b4c-9e67-59e36beacb45")
-        print("------------------------------------------------------")
-        print("     Teste ESPERA URL: Sucesso!!!                     ")
-        print("------------------------------------------------------")
+        print("-------------------------------------------------")
+        print("       Teste ESPERA URL: Sucesso!!!              ")
+        print("-------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("     Teste ESPERA URL: Falha!!!                       ")
-        print("------------------------------------------------------")
+        print("-------------------------------------------------")
+        print("       Teste ESPERA URL: Falha!!!                ")
+        print("-------------------------------------------------")
 
 
 # Digitando usuário e senha:
@@ -45,14 +45,14 @@ def datas():
         time.sleep(1.5)
         campo_senha.send_keys("123")
 
-        print("------------------------------------------------------")
-        print("     Teste DIGITAR DADOS: Sucesso!!!                  ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste DIGITAR DADOS: Sucesso!!!            ")
+        print("--------------------------------------------------")
 
     except:
-        print("------------------------------------------------------")
-        print("     Teste DIGITAR DADOS: Falha!!!                    ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste DIGITAR DADOS: Falha!!!              ")
+        print("--------------------------------------------------")
 
 
 # Clicando em entrar:
@@ -63,14 +63,14 @@ def clickEnter():
         teste_botao.click()
         time.sleep(1.5)
 
-        print("------------------------------------------------------")
-        print("     Teste CLICAR BOTÃO LOGIN: Sucesso!!!             ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR BOTÃO LOGIN: Sucesso!!!       ")
+        print("--------------------------------------------------")
 
     except:
-        print("------------------------------------------------------")
-        print("     Teste CLICAR BOTÃO LOGIN: Falha!!!               ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR BOTÃO LOGIN: Falha!!!         ")
+        print("--------------------------------------------------")
 
 
 # Aceitando termos e condições:
@@ -86,13 +86,13 @@ def termsConditions():
         botao_aceitar_termos.click()
         time.sleep(1.5)
 
-        print("------------------------------------------------------")
-        print("     Teste TERMOS: Sucesso!!!                         ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste TERMOS: Sucesso!!!                   ")
+        print("--------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("     Teste TERMOS: Falha!!!                           ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste TERMOS: Falha!!!                     ")
+        print("--------------------------------------------------")
 
 
 # Barra de rolagem:
@@ -100,13 +100,13 @@ def scrollBar():
     try:
         driver.execute_script("window.scrollTo(0, 550);")
         time.sleep(1.5)
-        print("------------------------------------------------------")
-        print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Sucesso!!!          ")
+        print("--------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("     Teste DESCENDO PAGINA: Falha!!!                  ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Falha!!!            ")
+        print("--------------------------------------------------")
 
 
 # Clicando no link FREQUÊNCIA:
@@ -116,13 +116,13 @@ def clickFrequencia():
         time.sleep(1.0)
         clicar_frequencia.click()
         time.sleep(1.0)
-        print("------------------------------------------------------")
-        print("     Teste CLICAR FREQUÊNCIA: Sucesso!!!              ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR FREQUÊNCIA: Sucesso!!!        ")
+        print("--------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("     Teste CLICAR FREQUÊNCIA: Falha!!!                ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR FREQUÊNCIA: Falha!!!          ")
+        print("--------------------------------------------------")
 
 
 # Ordenando em ordem crescente e decrescente: data, horario e local
@@ -149,13 +149,13 @@ def orderFrequencia():
         ordenar_local.click() # Clicar para filtra na ordem crescente
         time.sleep(1.5)
 
-        print("------------------------------------------------------")
-        print("     Teste FILTRO DATA, HORA E LOCAL: Sucesso!!!      ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste FILTRO DATA, HORA E LOCAL: Sucesso!!!")
+        print("--------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("     Teste FILTRO DATA, HORA E LOCAL: Falha!!!        ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste FILTRO DATA, HORA E LOCAL: Falha!!!  ")
+        print("--------------------------------------------------")
 
 """
     #//*[@id="main"]/section/div/div/div/div/div[1]/table/tbody/tr[2]/td[1]
@@ -187,13 +187,13 @@ def navegateFrequencia():
     try:
         driver.execute_script("window.scrollTo(0, 1800);")
         time.sleep(1.5)
-        print("------------------------------------------------------")
-        print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Sucesso!!!          ")
+        print("--------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("     Teste DESCENDO PAGINA: Falha!!!                  ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Falha!!!            ")
+        print("--------------------------------------------------")
 
 
 # Clicando no botão MENU:
@@ -204,14 +204,14 @@ def bottomMenu():
         clicar_menu.click()
         time.sleep(1.0)
 
-        print("------------------------------------------------------")
-        print("     Teste CLICAR MENU: Sucesso!!!                    ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR MENU: Sucesso!!!              ")
+        print("--------------------------------------------------")
 
     except:
-        print("------------------------------------------------------")
-        print("     Teste CLICAR MENU: Falha!!!                      ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR MENU: Falha!!!                ")
+        print("--------------------------------------------------")
 
 
 # Clicando em SAIR:
@@ -220,14 +220,14 @@ def clickExit():
         clicar_sair = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "p-submenu-list")))
         clicar_sair.click()
 
-        print("------------------------------------------------------")
-        print("     Teste CLICAR SAIR: Sucesso!!!                   ")
-        print("------------------------------------------------------")
+        print("---------------------------------------------------")
+        print("       Teste CLICAR SAIR: Sucesso!!!               ")
+        print("---------------------------------------------------")
 
     except:
-        print("------------------------------------------------------")
-        print("     Teste CLICAR SAIR: Falha!!!                      ")
-        print("------------------------------------------------------")
+        print("---------------------------------------------------")
+        print("       Teste CLICAR SAIR: Falha!!!                 ")
+        print("---------------------------------------------------")
 
 
 def main():
@@ -244,9 +244,9 @@ def main():
     bottomMenu()
     clickExit()
     time.sleep(1.5)
-    print("------------------------------------------------------")
-    print("                 FIM DA AUTOMAÇÃO!!!                  ")
-    print("------------------------------------------------------")
+    print("---------------------------------------------------")
+    print("               FIM DA AUTOMAÇÃO!!!                 ")
+    print("---------------------------------------------------")
     exit()
     input()
 
