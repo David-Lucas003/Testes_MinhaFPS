@@ -1,3 +1,11 @@
+# Inicialize o driver do Chrome usando o WebDriverManager
+#executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
+
+#cService=webdriver.ChromeService()
+#options = webdriver.ChromeOptions()
+#driver = webdriver.Chrome(service=cService, options=options)
+
+
 from selenium import webdriver 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -9,12 +17,6 @@ driver = webdriver.Firefox()
 time.sleep(1.0)
 driver.maximize_window()
 
-# Inicialize o driver do Chrome usando o WebDriverManager
-#executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
-
-#cService=webdriver.ChromeService()
-#options = webdriver.ChromeOptions()
-#driver = webdriver.Chrome(service=cService, options=options)
 
 print("------------------------------------------------------")
 print("           INICIO DOS TESTES AUTOMATIZADOS            ")
@@ -132,23 +134,23 @@ def orderFrequencia():
     try:
         ordenar_data = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[1]/div')
         time.sleep(1.5)
-        ordenar_data.click() # Clicar para filtra na ordem decrescente
+        ordenar_data.click() # Filtrar Data
         time.sleep(1.5)
-        ordenar_data.click() # Clicar para filtra na ordem crescente
+        ordenar_data.click() # Filtrar Data
         time.sleep(1.5)
 
         ordenar_horario = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[2]/div')
         time.sleep(1.5)
-        ordenar_horario.click() # Clicar para filtra na ordem decrescente
+        ordenar_horario.click() # Filtrar Horario
         time.sleep(1.5)
-        ordenar_horario.click() # Clicar para filtra na ordem crescente
+        ordenar_horario.click() # Filtrar Horario
         time.sleep(1.5)
 
         ordenar_local = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[3]/div')
         time.sleep(1.5)
-        ordenar_local.click() # Clicar para filtra na ordem decrescente
+        ordenar_local.click() # Filtrar Local
         time.sleep(1.5)
-        ordenar_local.click() # Clicar para filtra na ordem crescente
+        ordenar_local.click() # Filtrar Local
         time.sleep(1.5)
 
         print("------------------------------------------------------")

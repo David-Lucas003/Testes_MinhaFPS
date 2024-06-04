@@ -140,23 +140,23 @@ def orderFrequencia():
     try:
         ordenar_data = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[1]/div')
         time.sleep(1.5)
-        ordenar_data.click() # Clicar para filtra na ordem decrescente
+        ordenar_data.click() # Filtrar Data
         time.sleep(1.5)
-        ordenar_data.click() # Clicar para filtra na ordem crescente
+        ordenar_data.click() # Filtrar Data
         time.sleep(1.5)
 
         ordenar_horario = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[2]/div')
         time.sleep(1.5)
-        ordenar_horario.click() # Clicar para filtra na ordem decrescente
+        ordenar_horario.click() # Filtrar Horário
         time.sleep(1.5)
-        ordenar_horario.click() # Clicar para filtra na ordem crescente
+        ordenar_horario.click() # Filtrar Horário
         time.sleep(1.5)
 
         ordenar_local = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[3]/div')
         time.sleep(1.5)
-        ordenar_local.click() # Clicar para filtra na ordem decrescente
+        ordenar_local.click() # Filtrar Local
         time.sleep(1.5)
-        ordenar_local.click() # Clicar para filtra na ordem crescente
+        ordenar_local.click() # Filtrar Local
         time.sleep(1.5)
 
         print("------------------------------------------------------")

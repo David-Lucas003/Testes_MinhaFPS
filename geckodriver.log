@@ -517,3 +517,54 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 1717434792143	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
 1717434812639	Marionette	INFO	Stopped listening on port 50067
 Dynamically enable window occlusion 1
+1717521994921	geckodriver	INFO	Listening on 127.0.0.1:62918
+1717521997820	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62919" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofilen10Xox"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1717521998549	Marionette	INFO	Marionette enabled
+1717521998638	Marionette	INFO	Listening on port 62931
+WebDriver BiDi listening on ws://127.0.0.1:62919
+Read port: 62931
+1717521998809	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62919/devtools/browser/174326bc-4e2d-43c8-bf74-4787aa165bac
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1717522012616	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1717522028571	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://minhafps.fps.edu.br."
+1717522044829	Marionette	INFO	Stopped listening on port 62931
+Dynamically enable window occlusion 1
+1717522179897	geckodriver	INFO	Listening on 127.0.0.1:63034
+1717522182788	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63035" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofileMhXoLs"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1717522183344	Marionette	INFO	Marionette enabled
+1717522183429	Marionette	INFO	Listening on port 63050
+WebDriver BiDi listening on ws://127.0.0.1:63035
+Read port: 63050
+1717522183578	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR glean_core::database] Failed to record metric 'client_id' into glean_client_info: Error { kind: Rkv(IoError(Os { code: 5, kind: PermissionDenied, message: "Acesso negado." })) }
+DevTools listening on ws://127.0.0.1:63035/devtools/browser/8d9621f5-a748-4312-93bc-eba19021a4ac
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1717522196487	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1717522213375	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://minhafps.fps.edu.br."
+1717522228505	Marionette	INFO	Stopped listening on port 63050
+Dynamically enable window occlusion 1
+1717522297584	geckodriver	INFO	Listening on 127.0.0.1:63148
+1717522300283	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63149" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofileWC0wLr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1717522300853	Marionette	INFO	Marionette enabled
+1717522300941	Marionette	INFO	Listening on port 63160
+WebDriver BiDi listening on ws://127.0.0.1:63149
+Read port: 63160
+1717522301079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63149/devtools/browser/76f5a94e-495b-466a-8362-b07fccaf853a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1717522317164	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1717522330891	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1717522352153	Marionette	INFO	Stopped listening on port 63160
+Dynamically enable window occlusion 1

@@ -1,3 +1,11 @@
+# Inicialize o driver do Chrome usando o WebDriverManager
+#executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
+#cService=webdriver.ChromeService()
+#options = webdriver.ChromeOptions()
+#driver = webdriver.Chrome(service=cService, options=options)
+# Comandos para o funcionamento do automatizador
+
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -5,12 +13,6 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
-# Inicialize o driver do Chrome usando o WebDriverManager
-#executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
-
-#cService=webdriver.ChromeService()
-#options = webdriver.ChromeOptions()
-#driver = webdriver.Chrome(service=cService, options=options)
 driver = webdriver.Chrome()
 driver.maximize_window()
 wait = WebDriverWait(driver, 20)
@@ -130,23 +132,23 @@ def orderFrequencia():
     try:
         ordenar_data = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[1]/div')
         time.sleep(1.5)
-        ordenar_data.click() # Clicar para filtra na ordem decrescente
+        ordenar_data.click() # Filtrar Data
         time.sleep(1.5)
-        ordenar_data.click() # Clicar para filtra na ordem crescente
+        ordenar_data.click() # Filtrar Data
         time.sleep(1.5)
 
         ordenar_horario = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[2]/div')
         time.sleep(1.5)
-        ordenar_horario.click() # Clicar para filtra na ordem decrescente
+        ordenar_horario.click() # Filtrar Horario
         time.sleep(1.5)
-        ordenar_horario.click() # Clicar para filtra na ordem crescente
+        ordenar_horario.click() # Filtrar Horario
         time.sleep(1.5)
 
         ordenar_local = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[3]/div')
         time.sleep(1.5)
-        ordenar_local.click() # Clicar para filtra na ordem decrescente
+        ordenar_local.click() # Filtrar Local
         time.sleep(1.5)
-        ordenar_local.click() # Clicar para filtra na ordem crescente
+        ordenar_local.click() # Filtrar Local
         time.sleep(1.5)
 
         print("--------------------------------------------------")
@@ -156,30 +158,6 @@ def orderFrequencia():
         print("--------------------------------------------------")
         print("       Teste FILTRO DATA, HORA E LOCAL: Falha!!!  ")
         print("--------------------------------------------------")
-
-"""
-    #//*[@id="main"]/section/div/div/div/div/div[1]/table/tbody/tr[2]/td[1]
-
-def validateFrequencia():
-    #limit = dt.datetime.strptime('2024/05/24', '%y%m%d')
-    # pace = -1
-    # tabela = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/tbody')
-    # time.sleep(1.5)
-    datas = []
-   
-    try:
-        linhas = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/tbody/tr[1]/td[1]')
-        texto = linhas.text
-        datas.append(texto)
-        print(datas)   
-    except:
-        print("Erro")
-        print(tabela)
-
-    #data = []
-    #for tr in tabela.find_element(By.CLASS_NAME, 'p-datatable-table'):
-    #row = [item.text for item in tr.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr')]
-    #data.append(row)"""    
 
 
 # Navegando entre a área frequência:
