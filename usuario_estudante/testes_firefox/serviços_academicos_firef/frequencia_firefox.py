@@ -165,7 +165,7 @@ def orderFrequencia():
 # Navegando entre a área frequência:
 def validatetheFrequencia():
     try:
-        driver.execute_script("window.scrollTo(0, 1300);")
+        driver.execute_script("window.scrollTo(0, 2050);")
         time.sleep(1.5)
         print("------------------------------------------------------")
         print("      Teste DESCENDO PAGINA: Sucesso!!!               ")

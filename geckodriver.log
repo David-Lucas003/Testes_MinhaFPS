@@ -568,3 +568,87 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 1717522330891	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
 1717522352153	Marionette	INFO	Stopped listening on port 63160
 Dynamically enable window occlusion 1
+1718043021468	geckodriver	INFO	Listening on 127.0.0.1:55699
+1718043024456	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55700" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofileo7o73j"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1718043025144	Marionette	INFO	Marionette enabled
+1718043025236	Marionette	INFO	Listening on port 55710
+WebDriver BiDi listening on ws://127.0.0.1:55700
+Read port: 55710
+1718043025371	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55700/devtools/browser/e7e734a8-00a4-42a5-9d3a-928932800f63
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1718043042195	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1718043055169	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: services.settings: main/search-telemetry-v2 Signature verified failed. Retry from scratch
+1718043077275	Marionette	INFO	Stopped listening on port 55710
+Dynamically enable window occlusion 1
+1718043094453	geckodriver	INFO	Listening on 127.0.0.1:55777
+1718043097138	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55778" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofile6Qz8yY"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1718043097772	Marionette	INFO	Marionette enabled
+1718043097843	Marionette	INFO	Listening on port 55788
+Read port: 55788
+WebDriver BiDi listening on ws://127.0.0.1:55778
+1718043097892	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55778/devtools/browser/c529d5c2-a04f-4dd7-83fb-04b83572ba36
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1718043114446	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1718043127805	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: services.settings: main/search-telemetry-v2 Signature verified failed. Retry from scratch
+1718043149194	Marionette	INFO	Stopped listening on port 55788
+Dynamically enable window occlusion 1
+1718043164996	geckodriver	INFO	Listening on 127.0.0.1:55856
+1718043167921	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55857" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofile5urx3I"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1718043168473	Marionette	INFO	Marionette enabled
+1718043168551	Marionette	INFO	Listening on port 55865
+WebDriver BiDi listening on ws://127.0.0.1:55857
+Read port: 55865
+1718043168681	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55857/devtools/browser/115980e9-c424-4431-8149-58acc7a9c9a3
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1718043184317	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1718043198488	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: services.settings: main/search-telemetry-v2 Signature verified failed. Retry from scratch
+1718043219088	Marionette	INFO	Stopped listening on port 55865
+Dynamically enable window occlusion 1
+1718043232796	geckodriver	INFO	Listening on 127.0.0.1:55930
+1718043235836	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55931" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofilee9R28y"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1718043236156	Marionette	INFO	Marionette enabled
+1718043236228	Marionette	INFO	Listening on port 55938
+WebDriver BiDi listening on ws://127.0.0.1:55931
+Read port: 55938
+1718043236337	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55931/devtools/browser/3929cb28-e078-4d81-94ec-ce3175242d24
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1718043252947	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1718043266191	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1718043288028	Marionette	INFO	Stopped listening on port 55938
+Dynamically enable window occlusion 1
+1718043298049	geckodriver	INFO	Listening on 127.0.0.1:56008
+1718043301099	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56009" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofileESecGy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1718043301535	Marionette	INFO	Marionette enabled
+1718043301609	Marionette	INFO	Listening on port 56017
+WebDriver BiDi listening on ws://127.0.0.1:56009
+Read port: 56017
+1718043301736	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56009/devtools/browser/1ed48f95-23d7-4533-825d-06f90692e2f5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1718043317119	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1718043331558	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: services.settings: main/search-telemetry-v2 Signature verified failed. Retry from scratch
+1718043351976	Marionette	INFO	Stopped listening on port 56017
+Dynamically enable window occlusion 1
