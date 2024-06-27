@@ -224,7 +224,6 @@ def main():
     bottomMenu()
     clickExit()
     time.sleep(1.5)
-    driver.quit()
     print("\n")
     print("------------------------------------------------------")
     print("                  FIM DA AUTOMAÇÃO!!!                 ")
