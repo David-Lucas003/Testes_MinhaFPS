@@ -11,8 +11,7 @@ import time
 # Abrindo o Chrome
 driver = webdriver.Chrome()
 driver.maximize_window()
-time.sleep(1.5)
-wait = WebDriverWait(driver, 12.0)
+wait = WebDriverWait(driver, 15)
 
 print("-----------------------------------------")
 print("     INICIO DOS TESTES AUTOMATIZADOS     ")
@@ -39,16 +38,21 @@ def insertUrl():
 def cpfAndpassword():
     try:
 
-        wait.until(EC.visibility_of_element_located((By.ID, "username")))
         insert_cpf = driver.find_element(By.ID, "username")
+        time.sleep(1.5)
         insert_cpf.click()
+        time.sleep(1.5)
         insert_cpf.send_keys("03152024003")
+        time.sleep(1.5)
         insert_cpf.send_keys(Keys.TAB)
         
-        wait.until(EC.visibility_of_element_located((By.ID, "password")))
         insert_password = driver.find_element(By.ID, "password")
+        time.sleep(1.5)
         insert_password.click()
+        time.sleep(1.5)
         insert_password.send_keys("123")
+        time.sleep(1.5)
+
         
         
         print("-----------------------------------------")
@@ -65,9 +69,9 @@ def cpfAndpassword():
 def enter():
     try:
         bottom_enter = driver.find_element(By.NAME ,"login")
-        time.sleep(2.0)
+        time.sleep(1.0)
         bottom_enter.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("-----------------------------------------")
         print("       Teste LOGIN: Sucesso!!!           ")
         print("-----------------------------------------")
@@ -84,11 +88,11 @@ def acceptTerms():
 
         terms_box = driver.find_element(By.CLASS_NAME, "form-check")
         terms_box.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         click_accept = driver.find_element(By.ID, "aceitarTermos")
         click_accept.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         print("-----------------------------------------")
         print("       Teste TERMOS: Sucesso!!!          ")
@@ -103,7 +107,7 @@ def acceptTerms():
 def scrollScreen():
     try:
         driver.execute_script(f"window.scrollTo(0, 650)")
-        time.sleep(2.0)
+        time.sleep(1.0)
         print("-----------------------------------------")
         print("       Teste BARRA DE ROLAGEM: Sucesso!!!")
         print("-----------------------------------------")
@@ -117,10 +121,10 @@ def scrollScreen():
 #Campo cadastro facial
 def clickLink():
     try:
-        wait.until(EC.visibility_of_element_located((By.LINK_TEXT, "Cadastro Facial")))
         link_cadastro = driver.find_element(By.LINK_TEXT, "Cadastro Facial")
+        time.sleep(1.0)
         link_cadastro.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("-----------------------------------------")
         print("       Teste LINK CADASTRO: Sucesso!!!   ")
         print("-----------------------------------------")
@@ -136,22 +140,22 @@ def insertnumberEmail():
     try:
         campo_numero = driver.find_element(By.XPATH, "//*[@id=\"updateForm\"]/div[1]/input")
         campo_numero.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_numero.clear()
-        time.sleep(2.0)
+        time.sleep(1.0)
         campo_numero.send_keys("81999999999")
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_numero.send_keys(Keys.TAB)
 
         
         
         campo_email = driver.find_element(By.XPATH, "//*[@id=\"updateForm\"]/div[2]/input")
         campo_email.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_email.clear()
-        time.sleep(2.0)
+        time.sleep(1.0)
         campo_email.send_keys("usuarioteste03@teste.com")
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("-----------------------------------------")
         print("       Teste NUMERO E EMAIL: Sucesso!!!  ")
         print("-----------------------------------------")
@@ -231,7 +235,6 @@ def main():
     bottomMenu()
     clickExit()
     time.sleep(2.0)
-    driver.quit()
     print("\n")
     print("-----------------------------------------")
     print("-----------------------------------------")

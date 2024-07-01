@@ -1,11 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
 driver = webdriver.Firefox()
 driver.maximize_window()
+wait = WebDriverWait(driver, 12.0)
 
 
 print("----------------------------------------------------")
@@ -53,9 +56,9 @@ def insertcpfAndsenha():
 def enter():
     try:
         click_enter = driver.find_element(By.NAME, "login")
-        time.sleep(1.5)
+        time.sleep(1.0)
         click_enter.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         print("----------------------------------------------------")
         print("       Teste BOTÃO ENTRAR: Sucesso!!!               ")
@@ -92,7 +95,7 @@ def termsandConditions():
 def scrollSceen():
     try:
         driver.execute_script(f"window.scrollTo(0, 600)")
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("----------------------------------------------------")
         print("       Teste DESCER TELA: Sucesso!!!                ")
         print("----------------------------------------------------")
@@ -105,6 +108,7 @@ def scrollSceen():
 def linkCadastro():
     try:
         clicar_cadastro = driver.find_element(By.LINK_TEXT, "Cadastro Facial")
+        time.sleep(2.0)
         clicar_cadastro.click()
         time.sleep(2.0)
 
@@ -122,26 +126,22 @@ def numberandEmail():
     try:
         campo_numero = driver.find_element(By.XPATH, "/html/body/div/div/main/div/div/div/div[1]/form/div[1]/input")
         campo_numero.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_numero.clear()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         digitando_numero = driver.find_element(By.XPATH, "/html/body/div/div/main/div/div/div/div[1]/form/div[1]/input")
         digitando_numero.send_keys("81999999999")
-        time.sleep(2.0)
+        time.sleep(1.0)
         digitando_numero.send_keys(Keys.TAB)
 
         campo_email = driver.find_element(By.XPATH, "/html/body/div/div/main/div/div/div/div[1]/form/div[2]/input")
         campo_email.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_email.clear()
-    
-        digitando_email = driver.find_element(By.XPATH, "/html/body/div/div/main/div/div/div/div[1]/form/div[2]/input")
+        time.sleep(1.0)
+        campo_email.send_keys("usuarioteste03@teste.com")
         time.sleep(1.5)
-        digitando_email.send_keys("usuarioteste03@teste.com")
-        time.sleep(2.0)
-
-
         print("----------------------------------------------------")
         print("       Teste NUMERO E EMAIL: Sucesso!!!             ")
         print("----------------------------------------------------")
@@ -154,11 +154,9 @@ def numberandEmail():
 def update():
     try:
         bottom_update = driver.find_element(By.CSS_SELECTOR, "button.btn")
-        time.sleep(2.5)
+        time.sleep(1.5)
         bottom_update.click()
-        time.sleep(2.0)
-
-
+        time.sleep(1.5)
         print("----------------------------------------------------")
         print("       Teste ATUALIZAR: Sucesso!!!                  ")
         print("----------------------------------------------------")
@@ -168,36 +166,37 @@ def update():
         print("----------------------------------------------------")
 
 
-def bottomBack():
+
+def bottomMenu():
     try:
-        back_bottom = driver.find_element(By.LINK_TEXT, "Voltar")
-        time.sleep(2.5)
-        back_bottom.click()
-        time.sleep(2.0)
-
-        print("----------------------------------------------------")
-        print("       Teste CLICAR VOLTAR: Sucesso!!!              ")
-        print("----------------------------------------------------")
-    except:
-        print("----------------------------------------------------")
-        print("       Teste CLICAR VOLTAR: Falha!!!                ")
-        print("----------------------------------------------------")
-
-
-def backtoLogin():
-    try:
-        back_login = driver.find_element(By.LINK_TEXT, "Sair")
+        clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
         time.sleep(1.5)
-        back_login.click()
-        time.sleep(2.0)
+        clicar_menu.click()
+        time.sleep(1.5)
 
-        print("----------------------------------------------------")
-        print("       Teste VOLTAR LOGIN: Sucesso!!!               ")
-        print("----------------------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CLICAR MENU: Sucesso!!!          ")
+        print("----------------------------------------------")
+
     except:
-        print("----------------------------------------------------")
-        print("       Teste VOLTAR LOGIN: Falha!!!                 ")
-        print("----------------------------------------------------")
+        print("----------------------------------------------")
+        print("       Teste CLICAR MENU: Falha!!!            ")
+        print("----------------------------------------------")
+
+
+def clickExit():
+    try:
+        clicar_sair = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "p-submenu-list")))
+        clicar_sair.click()
+
+        print("----------------------------------------------")
+        print("       Teste CLICAR SAIR: Sucesso!!!          ")
+        print("----------------------------------------------")
+
+    except:
+        print("----------------------------------------------")
+        print("       Teste CLICAR SAIR: Falha!!!            ")
+        print("----------------------------------------------")
 
 
 
@@ -211,8 +210,8 @@ def main():
     linkCadastro()
     numberandEmail()
     update()
-    bottomBack()
-    backtoLogin()
+    bottomMenu()
+    clickExit()
     time.sleep(2.0)
     driver.quit()
     print("\n")

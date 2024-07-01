@@ -12,7 +12,6 @@ options.add_argument("--enable-chrome-browser-cloud-management")
 
 driver = webdriver.Edge(options=options)
 driver.maximize_window()
-time.sleep(1.0)
 wait = WebDriverWait(driver, 12.0)
 
 
@@ -26,7 +25,7 @@ print("----------------------------------------------")
 def checkUrl():
     try:
         driver.get("https://sso.fps.edu.br/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=https%3A%2F%2Fminhafps.fps.edu.br%2F%23%2F&state=b7449b72-e04b-4492-973b-be6316436a43&response_mode=fragment&response_type=code&scope=openid&nonce=a740fa15-f630-4e39-80c3-d28ab85147ad")
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("----------------------------------------------")
         print("       Teste CHECK URL: Sucesso!!!           ")
         print("----------------------------------------------")
@@ -76,14 +75,14 @@ def clickEnter():
 def termsConditions():
     try:
         terms_box = driver.find_element(By.CLASS_NAME, "form-check")
-        time.sleep(1.5)
+        time.sleep(1.0)
         terms_box.click()
-        time.sleep(2.0)
+        time.sleep(1.0)
 
         click_accept = driver.find_element(By.ID, "aceitarTermos")
-        time.sleep(1.5)
+        time.sleep(1.0)
         click_accept.click()
-        time.sleep(2.0)
+        time.sleep(1.0)
         print("----------------------------------------------")
         print("       Teste TERMOS: Sucesso!!!               ")
         print("----------------------------------------------")
@@ -96,7 +95,7 @@ def termsConditions():
 def scroll():
     try:
         driver.execute_script(f"window.scrollTo(0, 600)")
-        time.sleep(2.0)
+        time.sleep(1.0)
         print("----------------------------------------------")
         print("       Teste BARRA DE ROLAGEM: Sucesso!!!     ")
         print("----------------------------------------------")
@@ -110,9 +109,9 @@ def scroll():
 def link():
     try:
         link = driver.find_element(By.LINK_TEXT, "Cadastro Facial")
-        time.sleep(1.5)
+        time.sleep(1.0)
         link.click()
-        time.sleep(2.0)
+        time.sleep(1.0)
         print("----------------------------------------------")
         print("       Teste LINK CADASTRO: Sucesso!!!        ")
         print("----------------------------------------------")
@@ -127,20 +126,20 @@ def numberAndemail():
     try:
         campo_numero = driver.find_element(By.XPATH, "//*[@id=\"updateForm\"]/div[1]/input")
         campo_numero.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_numero.clear()
-        time.sleep(2.0)
+        time.sleep(1.0)
         campo_numero.send_keys("81999999999")
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_numero.send_keys(Keys.TAB)
         
         campo_email = driver.find_element(By.XPATH, "//*[@id=\"updateForm\"]/div[2]/input")
         campo_email.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
         campo_email.clear()
-        time.sleep(2.0)
+        time.sleep(1.0)
         campo_email.send_keys("usuarioteste03@teste.com")
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("----------------------------------------------")
         print("       Teste NUMERO E EMAIL: Sucesso!!!       ")
         print("----------------------------------------------")
@@ -211,7 +210,6 @@ def main():
     bottomMenu()
     clickExit()
     time.sleep(2.0)
-    driver.quit()
     print("\n")
     print("----------------------------------------------")
     print("----------------------------------------------")
