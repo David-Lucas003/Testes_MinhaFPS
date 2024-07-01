@@ -87,14 +87,14 @@ def clickSignin():
 def termsAndconditions():
     try:
         termos_e_condicoes = driver.find_element(By.CLASS_NAME, "form-check-label")
-        time.sleep(1.5)
+        time.sleep(1.0)
         termos_e_condicoes.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         botao_aceitar_termos = driver.find_element(By.ID, "aceitarTermos")
-        time.sleep(1.5)
+        time.sleep(1.0)
         botao_aceitar_termos.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         print("------------------------------------------------------")
         print("     Teste TERMOS: Sucesso!!!                        ")
@@ -109,7 +109,7 @@ def termsAndconditions():
 def scrollBar():
     try:
         driver.execute_script("window.scrollTo(0, 650);")
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("------------------------------------------------------")
         print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
         print("------------------------------------------------------")
@@ -139,25 +139,25 @@ def clickinFrequencia():
 def orderFrequencia():
     try:
         ordenar_data = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[1]/div')
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_data.click() # Filtrar Data
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_data.click() # Filtrar Data
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         ordenar_horario = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[2]/div')
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_horario.click() # Filtrar Horário
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_horario.click() # Filtrar Horário
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         ordenar_local = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[3]/div')
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_local.click() # Filtrar Local
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_local.click() # Filtrar Local
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         print("------------------------------------------------------")
         print("     Teste FILTRO DATA, HORA E LOCAL: Sucesso!!!      ")
@@ -172,7 +172,7 @@ def orderFrequencia():
 def validatetheFrequencia():
     try:
         driver.execute_script("window.scrollTo(0, 1300);")
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("------------------------------------------------------")
         print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
         print("------------------------------------------------------")

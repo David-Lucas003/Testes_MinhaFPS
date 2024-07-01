@@ -15,7 +15,7 @@ import time
 
 driver = webdriver.Chrome()
 driver.maximize_window()
-wait = WebDriverWait(driver, 20)
+wait = WebDriverWait(driver, 15)
 
 
 print("--------------------------------------------------")
@@ -61,9 +61,9 @@ def datas():
 def clickEnter():
     try:
         teste_botao = driver.find_element(By.ID, "kc-login")
-        time.sleep(1.5)
+        time.sleep(1.0)
         teste_botao.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         print("--------------------------------------------------")
         print("       Teste CLICAR BOTÃO LOGIN: Sucesso!!!       ")
@@ -79,14 +79,14 @@ def clickEnter():
 def termsConditions():
     try:
         termos_e_condicoes = driver.find_element(By.CLASS_NAME, "form-check-label")
-        time.sleep(1.5)
+        time.sleep(1.0)
         termos_e_condicoes.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         botao_aceitar_termos = driver.find_element(By.ID, "aceitarTermos")
-        time.sleep(1.5)
+        time.sleep(1.0)
         botao_aceitar_termos.click()
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         print("--------------------------------------------------")
         print("       Teste TERMOS: Sucesso!!!                   ")
@@ -101,7 +101,7 @@ def termsConditions():
 def scrollBar():
     try:
         driver.execute_script("window.scrollTo(0, 550);")
-        time.sleep(1.5)
+        time.sleep(1.0)
         print("--------------------------------------------------")
         print("       Teste DESCENDO PAGINA: Sucesso!!!          ")
         print("--------------------------------------------------")
@@ -131,25 +131,25 @@ def clickFrequencia():
 def orderFrequencia():
     try:
         ordenar_data = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[1]/div')
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_data.click() # Filtrar Data
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_data.click() # Filtrar Data
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         ordenar_horario = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[2]/div')
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_horario.click() # Filtrar Horario
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_horario.click() # Filtrar Horario
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         ordenar_local = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[3]/div')
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_local.click() # Filtrar Local
-        time.sleep(1.5)
+        time.sleep(1.0)
         ordenar_local.click() # Filtrar Local
-        time.sleep(1.5)
+        time.sleep(1.0)
 
         print("--------------------------------------------------")
         print("       Teste FILTRO DATA, HORA E LOCAL: Sucesso!!!")
@@ -163,7 +163,7 @@ def orderFrequencia():
 # Navegando entre a área frequência:
 def navegateFrequencia():
     try:
-        driver.execute_script("window.scrollTo(0, 1800);")
+        driver.execute_script("window.scrollTo(0, 1300);")
         time.sleep(1.5)
         print("--------------------------------------------------")
         print("       Teste DESCENDO PAGINA: Sucesso!!!          ")
@@ -178,9 +178,9 @@ def navegateFrequencia():
 def bottomMenu():
     try:
         clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
-        time.sleep(1.0)
+        time.sleep(1.5)
         clicar_menu.click()
-        time.sleep(1.0)
+        time.sleep(1.5)
 
         print("--------------------------------------------------")
         print("       Teste CLICAR MENU: Sucesso!!!              ")
