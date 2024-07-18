@@ -36,17 +36,13 @@ def insertcpfAndsenha():
         digitar_cpf.send_keys("03152024003")
         time.sleep(1.5)
         digitar_cpf.send_keys(Keys.TAB)
-
-
         digitar_senha = driver.find_element(By.XPATH, "//*[@id=\"password\"]")
         time.sleep(1.5)
         digitar_senha.send_keys("123")
         time.sleep(1.5)
-
         print("----------------------------------------------------")
         print("       Teste CPF SENHA: Sucesso!!!                  ")
         print("----------------------------------------------------")
-    
     except:
         print("----------------------------------------------------")
         print("       Teste CPF SENHA: Falha!!!                    ")
