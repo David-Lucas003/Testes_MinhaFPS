@@ -24,7 +24,7 @@ print("--------------------------------------------------")
 
 
 # Validar sucesso na URL:
-def waitUrl():
+def wait_url():
     try:
         driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=3862b5e8-fc67-49fe-8698-54075274eac2&response_mode=fragment&response_type=code&scope=openid&nonce=8576b837-76af-4eff-b17a-d4a73a678e52")
         print("-------------------------------------------------")
@@ -37,7 +37,7 @@ def waitUrl():
 
 
 # Digitando usuário e senha:
-def datas():
+def user_password():
     try:
         campo_cpf = driver.find_element(By.ID, "username")
         time.sleep(1.5)
@@ -58,7 +58,7 @@ def datas():
 
 
 # Clicando em entrar:
-def clickEnter():
+def click_login():
     try:
         teste_botao = driver.find_element(By.ID, "kc-login")
         time.sleep(1.0)
@@ -76,7 +76,7 @@ def clickEnter():
 
 
 # Aceitando termos e condições:
-def termsConditions():
+def conditions():
     try:
         termos_e_condicoes = driver.find_element(By.CLASS_NAME, "form-check-label")
         time.sleep(1.0)
@@ -98,7 +98,7 @@ def termsConditions():
 
 
 # Barra de rolagem:
-def scrollBar():
+def scroll_bar():
     try:
         driver.execute_script("window.scrollTo(0, 550);")
         time.sleep(1.0)
@@ -112,7 +112,7 @@ def scrollBar():
 
 
 # Clicando no link FREQUÊNCIA:
-def clickFrequencia():
+def search_frequencia():
     try:
         clicar_frequencia = driver.find_element(By.XPATH, '//*[@id="main"]/div/section[1]/div/div/div[2]/div/div/div[2]/a[1]')
         time.sleep(2.0)
@@ -128,7 +128,7 @@ def clickFrequencia():
 
 
 # Ordenando em ordem crescente e decrescente: data, horario e local
-def orderFrequencia():
+def order_frequencia():
       try:
           ordenar_data = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[1]")
           time.sleep(1.0)
@@ -161,7 +161,7 @@ def orderFrequencia():
 
 
 # Navegando entre a área frequência:
-def navegateFrequencia():
+def scroll_frequencia():
      try:
          driver.execute_script("window.scrollTo(0, 350);")
          time.sleep(1.5)
@@ -174,24 +174,24 @@ def navegateFrequencia():
          print("--------------------------------------------------")
 
 # Testar Paginação
-def testPaginacao():
+def test_paginacao():
     try:
-        escolher_pagina2 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[2]")
+        escolher_pagina2 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[1]")
         time.sleep(1.0)
         escolher_pagina2.click()
         time.sleep(1.5)
 
-        escolher_pagina3 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[3]")
+        escolher_pagina3 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[2]")
         time.sleep(1.0)
         escolher_pagina3.click()
         time.sleep(1.5)
 
-        escolher_pagina4 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[4]")
+        escolher_pagina4 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[3]")
         time.sleep(1.0)
         escolher_pagina4.click()
         time.sleep(1.5)
 
-        escolher_pagina5 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[6]")
+        escolher_pagina5 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[4]")
         time.sleep(1.0)
         escolher_pagina5.click()
         time.sleep(1.5)
@@ -206,7 +206,7 @@ def testPaginacao():
         print("--------------------------------------------------")
 
 # Clicando no botão MENU:
-def bottomMenu():
+def bottom_menu():
      try:
          clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
          time.sleep(1.5)
@@ -224,7 +224,7 @@ def bottomMenu():
 
 
 # Clicando em SAIR:
-def clickExit():
+def click_exit():
      try:
          clicar_sair = driver.find_element(By.LINK_TEXT, "Sair")
          time.sleep(1.5)
@@ -242,18 +242,18 @@ def clickExit():
 
 def main():
 
-    waitUrl()
-    datas()
-    clickEnter()
-    termsConditions()
-    scrollBar()
-    clickFrequencia()
-    orderFrequencia()
+    wait_url()
+    user_password()
+    click_login()
+    conditions()
+    scroll_bar()
+    search_frequencia()
+    order_frequencia()
     #validateFrequencia()
-    navegateFrequencia()
-    testPaginacao()
-    bottomMenu()
-    clickExit()
+    scroll_frequencia()
+    test_paginacao()
+    bottom_menu()
+    click_exit()
     time.sleep(2.5)
     print("---------------------------------------------------")
     print("               FIM DA AUTOMAÇÃO!!!                 ")
