@@ -28,9 +28,9 @@ print("           INICIO DOS TESTES AUTOMATIZADOS            ")
 print("------------------------------------------------------")
 
 
-def checkUrl():
+def check_url():
     try:
-        driver.get("https://sso.fps.edu.br/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=https%3A%2F%2Fminhafps.fps.edu.br%2F&state=204f708e-f5c4-48c1-8005-211abec45d90&response_mode=fragment&response_type=code&scope=openid&nonce=26f9f433-f988-4b4c-9e67-59e36beacb45")
+        driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=3862b5e8-fc67-49fe-8698-54075274eac2&response_mode=fragment&response_type=code&scope=openid&nonce=8576b837-76af-4eff-b17a-d4a73a678e52")
         print("------------------------------------------------------")
         print("     Teste VALIDANDO URL: Sucesso!!!                  ")
         print("------------------------------------------------------")
@@ -40,18 +40,13 @@ def checkUrl():
         print("------------------------------------------------------")
 
 
-def insertDatas():
+def insert_datas():
     try:
         digitando_usuario = driver.find_element(By.ID, "username")
         time.sleep(1.5)
-        digitando_usuario.click()
+        digitando_usuario.send_keys("08136535418")
         time.sleep(1.5)
-        digitando_usuario.send_keys("03152024003")
-        time.sleep(1.5)
-
         digitando_senha = driver.find_element(By.ID, "password")
-        time.sleep(1.5)
-        digitando_senha.click()
         time.sleep(1.5)
         digitando_senha.send_keys("123")
         time.sleep(0.5)
@@ -67,24 +62,24 @@ def insertDatas():
         print("------------------------------------------------------")
 
 
-def clickSignin():
+def click_enter():
     try:
         teste_botao = driver.find_element(By.ID, "kc-login")
         time.sleep(1.5)
         teste_botao.click()
         time.sleep(1.5)
         print("------------------------------------------------------")
-        print("     Teste BOTÃO: Sucesso!!!                          ")
+        print("     Teste LOGIN: Sucesso!!!                          ")
         print("------------------------------------------------------")
 
     except:
         print("------------------------------------------------------")
-        print("     Teste BOTÃO: Falha!!!                            ")
+        print("     Teste LOGIN: Falha!!!                            ")
         print("------------------------------------------------------")
 
 
 # Aceitando termos e condições:
-def termsAndconditions():
+def terms_conditions():
     try:
         termos_e_condicoes = driver.find_element(By.CLASS_NAME, "form-check-label")
         time.sleep(1.0)
@@ -106,9 +101,9 @@ def termsAndconditions():
 
 
 # Barra de rolagem:
-def scrollBar():
+def scroll_bar():
     try:
-        driver.execute_script("window.scrollTo(0, 650);")
+        driver.execute_script("window.scrollTo(0, 550);")
         time.sleep(1.0)
         print("------------------------------------------------------")
         print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
@@ -120,9 +115,9 @@ def scrollBar():
 
 
 # Clicando no link FREQUÊNCIA:
-def clickinFrequencia():
+def click_frequencia():
     try:
-        clicar_frequencia = driver.find_element(By.XPATH, "//*[@id=\"main\"]/div/section[1]/div/div/div[2]/div/div/div[2]/a")
+        clicar_frequencia = driver.find_element(By.XPATH, '//*[@id="main"]/div/section[1]/div/div/div[2]/div/div/div[2]/a[1]')
         time.sleep(1.0)
         clicar_frequencia.click()
         time.sleep(1.0)
@@ -136,23 +131,23 @@ def clickinFrequencia():
 
 
 # Ordenando em ordem crescente e decrescente: data, horário e local
-def orderFrequencia():
+def order_frequencia():
     try:
-        ordenar_data = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[1]/div')
-        time.sleep(1.0)
+        ordenar_data = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[1]")
+        time.sleep(1.0)                              
         ordenar_data.click() # Filtrar Data
         time.sleep(1.0)
         ordenar_data.click() # Filtrar Data
         time.sleep(1.0)
 
-        ordenar_horario = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[2]/div')
+        ordenar_horario = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[2]")
         time.sleep(1.0)
         ordenar_horario.click() # Filtrar Horário
         time.sleep(1.0)
         ordenar_horario.click() # Filtrar Horário
         time.sleep(1.0)
 
-        ordenar_local = driver.find_element(By.XPATH, '//*[@id="main"]/section/div/div/div/div/div[1]/table/thead/tr/th[3]/div')
+        ordenar_local = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[3]")
         time.sleep(1.0)
         ordenar_local.click() # Filtrar Local
         time.sleep(1.0)
@@ -169,9 +164,9 @@ def orderFrequencia():
 
 
 # Navegando entre a área frequência:
-def validatetheFrequencia():
+def validate_frequencia():
     try:
-        driver.execute_script("window.scrollTo(0, 1300);")
+        driver.execute_script("window.scrollTo(0, 400);")
         time.sleep(1.0)
         print("------------------------------------------------------")
         print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
@@ -182,7 +177,41 @@ def validatetheFrequencia():
         print("------------------------------------------------------")
         
 
-def bottomMenu():
+# navegando entre as paginas com as frequencias
+def test_pages():
+    try:
+        escolher_pagina2 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[1]")
+        time.sleep(1.0)
+        escolher_pagina2.click()
+        time.sleep(1.5)
+
+        escolher_pagina3 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[2]")
+        time.sleep(1.0)
+        escolher_pagina3.click()
+        time.sleep(1.5)
+
+        escolher_pagina4 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[3]")
+        time.sleep(1.0)
+        escolher_pagina4.click()
+        time.sleep(1.5)
+
+        escolher_pagina5 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[4]")
+        time.sleep(1.0)
+        escolher_pagina5.click()
+        time.sleep(1.5)
+
+        print("--------------------------------------------------")
+        print("      Teste PAGINAÇÃO: Sucesso!!!                 ")
+        print("--------------------------------------------------")
+
+    except:
+        print("--------------------------------------------------")
+        print("      Teste PAGINAÇÃO: Falha!!!                   ")
+        print("--------------------------------------------------")
+
+
+# clicando no menu
+def bottom_menu():
     try:
         clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
         time.sleep(1.0)
@@ -200,10 +229,12 @@ def bottomMenu():
 
 
 # Clicando em SAIR:
-def clickExit():
+def click_exit():
     try:
-        clicar_sair = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "p-submenu-list")))
+        clicar_sair = driver.find_element(By.LINK_TEXT, "Sair")
+        time.sleep(1.5)
         clicar_sair.click()
+        time.sleep(1.5)
 
         print("-----------------------------------------------------")
         print("     Teste CLICAR SAIR: Sucesso!!!                   ")
@@ -216,16 +247,17 @@ def clickExit():
 
 
 def main():
-    checkUrl()
-    insertDatas()
-    clickSignin()
-    termsAndconditions()
-    scrollBar()
-    clickinFrequencia()
-    orderFrequencia()
-    validatetheFrequencia()
-    bottomMenu()
-    clickExit()
+    check_url()
+    insert_datas()
+    click_enter()
+    terms_conditions()
+    scroll_bar()
+    click_frequencia()
+    order_frequencia()
+    validate_frequencia()
+    test_pages()
+    bottom_menu()
+    click_exit()
     time.sleep(1.5)
     print("------------------------------------------------------")
     print("                  FIM DA AUTOMAÇÃO!!!                 ")

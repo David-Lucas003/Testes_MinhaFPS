@@ -66,12 +66,12 @@ def clickEnter():
         time.sleep(1.0)
 
         print("--------------------------------------------------")
-        print("       Teste CLICAR BOTÃO LOGIN: Sucesso!!!       ")
+        print("       Teste BOTÃO LOGIN: Sucesso!!!              ")
         print("--------------------------------------------------")
 
     except:
         print("--------------------------------------------------")
-        print("       Teste CLICAR BOTÃO LOGIN: Falha!!!         ")
+        print("       Teste BOTÃO LOGIN: Falha!!!                ")
         print("--------------------------------------------------")
 
 
@@ -191,7 +191,7 @@ def testPaginacao():
         escolher_pagina4.click()
         time.sleep(1.5)
 
-        escolher_pagina5 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[5]")
+        escolher_pagina5 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[6]")
         time.sleep(1.0)
         escolher_pagina5.click()
         time.sleep(1.5)
@@ -258,7 +258,6 @@ def main():
     print("---------------------------------------------------")
     print("               FIM DA AUTOMAÇÃO!!!                 ")
     print("---------------------------------------------------")
-    
     exit()
     input()
 
