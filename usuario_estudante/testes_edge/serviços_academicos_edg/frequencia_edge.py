@@ -28,6 +28,7 @@ print("           INICIO DOS TESTES AUTOMATIZADOS            ")
 print("------------------------------------------------------")
 
 
+# verificar se a url é valida
 def check_url():
     try:
         driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=3862b5e8-fc67-49fe-8698-54075274eac2&response_mode=fragment&response_type=code&scope=openid&nonce=8576b837-76af-4eff-b17a-d4a73a678e52")
@@ -40,6 +41,7 @@ def check_url():
         print("------------------------------------------------------")
 
 
+# digitar usuário e senha
 def insert_datas():
     try:
         digitando_usuario = driver.find_element(By.ID, "username")
@@ -62,6 +64,7 @@ def insert_datas():
         print("------------------------------------------------------")
 
 
+# Clicar em entrar
 def click_enter():
     try:
         teste_botao = driver.find_element(By.ID, "kc-login")

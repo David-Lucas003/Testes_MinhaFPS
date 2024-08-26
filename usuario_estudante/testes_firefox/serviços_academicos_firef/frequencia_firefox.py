@@ -22,6 +22,8 @@ print("------------------------------------------------------")
 print("           INICIO DOS TESTES AUTOMATIZADOS            ")
 print("------------------------------------------------------")
 
+
+# Validar url
 def test_url():
     try:
         driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=3862b5e8-fc67-49fe-8698-54075274eac2&response_mode=fragment&response_type=code&scope=openid&nonce=8576b837-76af-4eff-b17a-d4a73a678e52")
@@ -34,6 +36,7 @@ def test_url():
         print("------------------------------------------------------")
 
 
+# Inserir usuário e senha
 def test_login():
     try:
         digitando_usuario = driver.find_element(By.ID, "username")
@@ -61,7 +64,7 @@ def test_login():
         print("-----------------------------------------------------")
 
 
-
+# Clicar em entrar
 def bottom_enter():
     try:
         teste_botao = driver.find_element(By.ID, "kc-login")
@@ -130,6 +133,7 @@ def search_frequencia():
         print("------------------------------------------------------")
 
 
+# Filtrar data, horário e local
 def order_frequencia():
     try:
         ordenar_data = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[1]")
@@ -162,7 +166,7 @@ def order_frequencia():
         print("------------------------------------------------------")
 
 
-# Navegando entre a área frequência:
+# Usando o scroll para descer a página:
 def scroll_frequencia():
     try:
         driver.execute_script("window.scrollTo(0, 1300);")
@@ -174,8 +178,9 @@ def scroll_frequencia():
         print("------------------------------------------------------")
         print("      Teste DESCENDO PAGINA: Falha!!!                 ")
         print("------------------------------------------------------")
-        
 
+
+# Navegar entre as paginas da frequência
 def test_paginacao():
     try:
         escolher_pagina2 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[1]")
