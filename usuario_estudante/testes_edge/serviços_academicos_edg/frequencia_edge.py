@@ -1,3 +1,11 @@
+# Inicialize o driver do Chrome usando o WebDriverManager
+#executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
+
+#cService=webdriver.ChromeService()
+#options = webdriver.ChromeOptions()
+#driver = webdriver.Chrome(service=cService, options=options)
+
+
 from selenium import webdriver 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,19 +24,13 @@ time.sleep(1.0)
 wait = WebDriverWait(driver, 12.0)
 
 
-# Inicialize o driver do Chrome usando o WebDriverManager
-#executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
-
-#cService=webdriver.ChromeService()
-#options = webdriver.ChromeOptions()
-#driver = webdriver.Chrome(service=cService, options=options)
 
 print("------------------------------------------------------")
 print("           INICIO DOS TESTES AUTOMATIZADOS            ")
 print("------------------------------------------------------")
 
 
-# verificar se a url é valida
+# Verificar se a url é valida
 def check_url():
     try:
         driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=3862b5e8-fc67-49fe-8698-54075274eac2&response_mode=fragment&response_type=code&scope=openid&nonce=8576b837-76af-4eff-b17a-d4a73a678e52")
@@ -41,7 +43,7 @@ def check_url():
         print("------------------------------------------------------")
 
 
-# digitar usuário e senha
+# Digitar usuário e senha
 def insert_datas():
     try:
         digitando_usuario = driver.find_element(By.ID, "username")
@@ -180,7 +182,7 @@ def validate_frequencia():
         print("------------------------------------------------------")
         
 
-# navegando entre as paginas com as frequencias
+# Paginando as frequencias
 def test_pages():
     try:
         escolher_pagina2 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[1]")
@@ -213,7 +215,7 @@ def test_pages():
         print("--------------------------------------------------")
 
 
-# clicando no menu
+# Clicando no menu
 def bottom_menu():
     try:
         clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
