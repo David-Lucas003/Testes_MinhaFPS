@@ -1196,3 +1196,23 @@ Read port: 50814
 1724408364799	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
 1724408368476	Marionette	INFO	Stopped listening on port 50814
 Dynamically enable window occlusion 1
+1728050160994	geckodriver	INFO	Listening on 127.0.0.1:51924
+1728050164005	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51925" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofileG9nvQU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1728050164493	Marionette	INFO	Marionette enabled
+1728050164638	Marionette	INFO	Listening on port 51935
+WebDriver BiDi listening on ws://127.0.0.1:51925
+Read port: 51935
+1728050164853	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1728050170864	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://192.168.45.60:8000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://192.168.45.60:8000."
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-1TPRFCVL9E, line 184: Script terminated by timeout at:
+z@https://www.googletagmanager.com/gtag/js?id=G-1TPRFCVL9E:184:158
+jA@https://www.googletagmanager.com/gtag/js?id=G-1TPRFCVL9E:576:134
+kA/<@https://www.googletagmanager.com/gtag/js?id=G-1TPRFCVL9E:576:111
+
+1728050209257	Marionette	INFO	Stopped listening on port 51935
+Dynamically enable window occlusion 1

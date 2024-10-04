@@ -26,7 +26,7 @@ print("--------------------------------------------------")
 # Validar sucesso na URL:
 def wait_url():
     try:
-        driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=3862b5e8-fc67-49fe-8698-54075274eac2&response_mode=fragment&response_type=code&scope=openid&nonce=8576b837-76af-4eff-b17a-d4a73a678e52")
+        driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=343513b1-ff7d-4a8b-8212-43f760d0b625&response_mode=fragment&response_type=code&scope=openid&nonce=a88e8d8d-d804-4216-b37b-41e8f8e10ff8http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=343513b1-ff7d-4a8b-8212-43f760d0b625&response_mode=fragment&response_type=code&scope=openid&nonce=a88e8d8d-d804-4216-b37b-41e8f8e10ff8")
         print("-------------------------------------------------")
         print("       Teste ESPERA URL: Sucesso!!!              ")
         print("-------------------------------------------------")
