@@ -8,14 +8,15 @@
 
 from selenium import webdriver 
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.edge.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
 driver = webdriver.Firefox()
 time.sleep(1.0)
 driver.maximize_window()
+wait = WebDriverWait(driver, 12.0)
 
 
 print("------------------------------------------------------")
@@ -26,7 +27,7 @@ print("------------------------------------------------------")
 # Validar url
 def test_url():
     try:
-        driver.get("http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=343513b1-ff7d-4a8b-8212-43f760d0b625&response_mode=fragment&response_type=code&scope=openid&nonce=a88e8d8d-d804-4216-b37b-41e8f8e10ff8http://192.168.45.60:8000/realms/academico/protocol/openid-connect/auth?client_id=clientPainel&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&state=343513b1-ff7d-4a8b-8212-43f760d0b625&response_mode=fragment&response_type=code&scope=openid&nonce=a88e8d8d-d804-4216-b37b-41e8f8e10ff8")
+        driver.get("https://minhafps.fps.edu.br/")
         print("------------------------------------------------------")
         print("      Teste VALIDANDO URL: Sucesso!!!                 ")
         print("------------------------------------------------------")
@@ -43,7 +44,7 @@ def test_login():
         time.sleep(1.5)
         digitando_usuario.click()
         time.sleep(1.5)
-        digitando_usuario.send_keys("08136535418")
+        digitando_usuario.send_keys("03152024001")
         time.sleep(1.5)
 
         digitando_senha = driver.find_element(By.ID, "password")
@@ -117,92 +118,139 @@ def scroll_bar():
         print("------------------------------------------------------")
 
 
+# Barra de rolagem:
+def scroll_bar():
+    try:
+        driver.execute_script("window.scrollTo(0, 550);")
+        time.sleep(1.0)
+        print("------------------------------------------------------")
+        print("     Teste DESCENDO PAGINA: Sucesso!!!                ")
+        print("------------------------------------------------------")
+    except:
+        print("------------------------------------------------------")
+        print("     Teste DESCENDO PAGINA: Falha!!!                  ")
+        print("------------------------------------------------------")
+
+
 # Clicando no link FREQUÊNCIA:
 def search_frequencia():
     try:
-        clicar_frequencia = driver.find_element(By.XPATH, '//*[@id="main"]/div/section[1]/div/div/div[2]/div/div/div[2]/a[1]')
-        time.sleep(1.0)
+
+        clicar_frequencia = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/div/section[1]/div/div/div[2]/div/div/div[2]/a[1]')) 
+        )
+        
         clicar_frequencia.click()
-        time.sleep(1.0)
-        print("------------------------------------------------------")
-        print("      Teste CLICAR FREQUÊNCIA: Sucesso!!!             ")
-        print("------------------------------------------------------")
+        
+        print("--------------------------------------------------")
+        print("       Teste CLICAR FREQUÊNCIA: Sucesso!!!        ")
+        print("--------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("      Teste CLICAR FREQUÊNCIA: Falha!!!               ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR FREQUÊNCIA: Falha!!!          ")
+        print("--------------------------------------------------")
 
 
-# Filtrar data, horário e local
-def order_frequencia():
+# Filtrar por localidade
+def clicar_filtro():
     try:
-        ordenar_data = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[1]")
-        time.sleep(1.0)
-        ordenar_data.click() # Filtrar Data
-        time.sleep(1.0)
-        ordenar_data.click() # Filtrar Data
-        time.sleep(1.0)
-
-        ordenar_horario = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[2]")
-        time.sleep(1.0)
-        ordenar_horario.click() # Filtrar Horario
-        time.sleep(1.0)
-        ordenar_horario.click() # Filtrar Horario
-        time.sleep(1.0)
-
-        ordenar_local = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[3]")
-        time.sleep(1.0)
-        ordenar_local.click() # Filtrar Local
-        time.sleep(1.0)
-        ordenar_local.click() # Filtrar Local
-        time.sleep(1.0)
-
-        print("------------------------------------------------------")
-        print("      Teste FILTRO DATA, HORA E LOCAL: Sucesso!!!     ")
-        print("------------------------------------------------------")
-    except:
-        print("------------------------------------------------------")
-        print("      Teste FILTRO DATA, HORA E LOCAL: Falha!!!       ")
-        print("------------------------------------------------------")
+        local = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[@id='filtroFrequenciaFacial']/span"))
+        )
+        local.click()
+        
+        clicar_novamente = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[@id='filtroFrequenciaFacial']/span"))
+        )
+        clicar_novamente.click()
+        print("--------------------------------------------------")
+        print("       Teste Filtrar local: Sucesso!!!            ")
+        print("--------------------------------------------------")
+    except Exception:
+        print("--------------------------------------------------")
+        print("       Teste Filtrar local: Falha!!!              ")
+        print("--------------------------------------------------")
 
 
-# Usando o scroll para descer a página:
+# Descer tela:
 def scroll_frequencia():
     try:
-        driver.execute_script("window.scrollTo(0, 1300);")
-        time.sleep(1.0)
-        print("------------------------------------------------------")
-        print("      Teste DESCENDO PAGINA: Sucesso!!!               ")
-        print("------------------------------------------------------")
+        wait.until(
+            EC.presence_of_element_located((By.TAG_NAME, 'body'))
+        )
+        driver.execute_script("window.scrollTo(0, 350);")
+        time.sleep(1.5)
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Sucesso!!!          ")
+        print("--------------------------------------------------")
     except:
-        print("------------------------------------------------------")
-        print("      Teste DESCENDO PAGINA: Falha!!!                 ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Falha!!!            ")
+        print("--------------------------------------------------")
 
 
-# Navegar entre as paginas da frequência
+#  ordem crescente e decrescente
+def order_frequencia():
+    try:
+        ordenar_data = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[1]"))
+        )
+        ordenar_data.click() 
+        time.sleep(1.5) 
+        ordenar_data.click()  
+        
+
+        ordenar_horario = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[2]"))
+        )
+        ordenar_horario.click()  
+        time.sleep(1.5)
+        ordenar_horario.click()  
+        
+
+        ordenar_local = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[@id='main']/section/div/div/div/div/div[1]/table/thead/tr/th[3]"))
+        )
+        ordenar_local.click()  
+        time.sleep(1.5)
+        ordenar_local.click()  
+
+        print("--------------------------------------------------")
+        print("       Teste FILTRO DATA, HORA E LOCAL: Sucesso!!!")
+        print("--------------------------------------------------")
+    except Exception as e:
+
+        print("--------------------------------------------------")
+        print(f"      Teste FILTRO DATA, HORA E LOCAL: Falha!!!  ")
+        print("--------------------------------------------------")
+
+
+# Descer tela novamente:
+def scroll_again():
+    try:
+        wait.until(
+            EC.presence_of_element_located((By.TAG_NAME, 'body'))
+        )
+        driver.execute_script("window.scrollTo(0, 900);")
+        time.sleep(1.5)
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Sucesso!!!          ")
+        print("--------------------------------------------------")
+    except:
+        print("--------------------------------------------------")
+        print("       Teste DESCENDO PAGINA: Falha!!!            ")
+        print("--------------------------------------------------")
+
+# Testar Paginação
 def test_paginacao():
     try:
-        escolher_pagina2 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[1]")
-        time.sleep(1.0)
+        escolher_pagina2 = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[@id='main']/section/div/div/div[2]/div/nav/div/div/span/button[2]"))
+        )
         escolher_pagina2.click()
         time.sleep(1.5)
 
-        escolher_pagina3 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[2]")
-        time.sleep(1.0)
-        escolher_pagina3.click()
-        time.sleep(1.5)
-
-        escolher_pagina4 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[3]")
-        time.sleep(1.0)
-        escolher_pagina4.click()
-        time.sleep(1.5)
-
-        escolher_pagina5 = driver.find_element(By.XPATH, "//*[@id='main']/section/div/div/div/div/nav/div/span/button[4]")
-        time.sleep(1.0)
-        escolher_pagina5.click()
-        time.sleep(1.5)
-
+    
         print("--------------------------------------------------")
         print("       Teste PAGINAÇÃO: Sucesso!!!                ")
         print("--------------------------------------------------")
@@ -212,62 +260,64 @@ def test_paginacao():
         print("       Teste PAGINAÇÃO: Falha!!!                  ")
         print("--------------------------------------------------")
 
-
 # Clicando no botão MENU:
 def bottom_menu():
     try:
-        clicar_menu = driver.find_element(By.ID, "pv_id_1_0")
-        time.sleep(1.0)
+        clicar_menu = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "pv_id_1_0"))
+        )
         clicar_menu.click()
-        time.sleep(1.0)
+        time.sleep(1.5)
 
-        print("------------------------------------------------------")
-        print("      Teste CLICAR MENU: Sucesso!!!                   ")
-        print("------------------------------------------------------")
+        print("--------------------------------------------------")
+        print("       Teste CLICAR MENU: Sucesso!!!              ")
+        print("--------------------------------------------------")
 
     except:
-        print("------------------------------------------------------")
-        print("      Teste CLICAR MENU: Falha!!!                     ")
-        print("------------------------------------------------------")        
+        print("--------------------------------------------------")
+        print("       Teste CLICAR MENU: Falha!!!                ")
+        print("--------------------------------------------------")
 
 
 # Clicando em SAIR:
 def click_exit():
     try:
-        clicar_sair = driver.find_element(By.LINK_TEXT, "Sair")
-        time.sleep(1.0)
+        clicar_sair = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.LINK_TEXT, "Sair"))
+        )
         clicar_sair.click()
-        time.sleep(1.0)
-
-        print("------------------------------------------------------")
-        print("      Teste CLICAR SAIR: Sucesso!!!                   ")
-        print("------------------------------------------------------")
+        time.sleep(1.5)
+        
+        print("---------------------------------------------------")
+        print("       Teste CLICAR SAIR: Sucesso!!!               ")
+        print("---------------------------------------------------")
 
     except:
-        print("------------------------------------------------------")
-        print("      Teste CLICAR SAIR: Falha!!!                     ")
-        print("------------------------------------------------------") 
+        print("---------------------------------------------------")
+        print("       Teste CLICAR SAIR: Falha!!!                 ")
+        print("---------------------------------------------------")
 
 
 def main():
+
     test_url()
     test_login()
     bottom_enter()
     terms()
     scroll_bar()
     search_frequencia()
-    order_frequencia()
+    clicar_filtro()
     scroll_frequencia()
+    order_frequencia()
+    scroll_again()
     test_paginacao()
     bottom_menu()
     click_exit()
-    time.sleep(1.5)
-    print("")
-    print("------------------------------------------------------")
-    print("                  FIM DA AUTOMAÇÃO!!!                 ")
-    print("------------------------------------------------------")
+    time.sleep(2.5)
+    print("---------------------------------------------------")
+    print("               FIM DA AUTOMAÇÃO!!!                 ")
+    print("---------------------------------------------------")
     driver.quit()
-    exit()
     input()
 
 main()
