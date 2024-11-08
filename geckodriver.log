@@ -1274,3 +1274,71 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
 1728311378495	Marionette	INFO	Stopped listening on port 52289
 Dynamically enable window occlusion 1
+1729183466331	geckodriver	INFO	Listening on 127.0.0.1:60989
+1729183469332	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60990" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofilefVIibn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729183470054	Marionette	INFO	Marionette enabled
+1729183470233	Marionette	INFO	Listening on port 60999
+Read port: 60999
+WebDriver BiDi listening on ws://127.0.0.1:60990
+1729183470296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729183474060	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1729183510026	Marionette	INFO	Stopped listening on port 60999
+Dynamically enable window occlusion 1
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  CrashMonitor: Writing notifications to file after receiving profile-before-change and awaiting all checkpoints written
+          Phase: IOUtils: waiting for profileBeforeChange IO to complete
+          State: {"profile-after-change":true,"final-ui-startup":true,"sessionstore-windows-restored":true,"quit-application-granted":true,"quit-application":true,"sessionstore-final-state-write-complete":true,"profile-change-net-teardown":true,"profile-change-teardown":true,"profile-before-change":true}
+WARNING: NotAllowedError: Could not write to `C:\Users\DAVID~1.BAR\AppData\Local\Temp\rust_mozprofilefVIibn\sessionCheckpoints.json': could not move overwite with temporary file: Could not move `C:\Users\DAVID~1.BAR\AppData\Local\Temp\rust_mozprofilefVIibn\sessionCheckpoints.json.tmp' to `C:\Users\DAVID~1.BAR\AppData\Local\Temp\rust_mozprofilefVIibn\sessionCheckpoints.json' (NS_ERROR_FILE_ACCESS_DENIED)
+WARNING: observe@resource://gre/modules/AsyncShutdown.sys.mjs:569:17
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotAllowedError: Could not write to `C:\Users\DAVID~1.BAR\AppData\Local\Temp\rust_mozprofilefVIibn\sessionCheckpoints.json': could not move overwite with temporary file: Could not move `C:\Users\DAVID~1.BAR\AppData\Local\Temp\rust_mozprofilefVIibn\sessionCheckpoints.json.tmp' to `C:\Users\DAVID~1.BAR\AppData\Local\Temp\rust_mozprofilefVIibn\sessionCheckpoints.json' (NS_ERROR_FILE_ACCESS_DENIED)
+1729272840629	geckodriver	INFO	Listening on 127.0.0.1:55840
+1729272843637	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55841" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofileZynNlJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729272844519	Marionette	INFO	Marionette enabled
+1729272844709	Marionette	INFO	Listening on port 55850
+WebDriver BiDi listening on ws://127.0.0.1:55841
+Read port: 55850
+1729272844856	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729272848463	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1729272884820	Marionette	INFO	Stopped listening on port 55850
+Dynamically enable window occlusion 1
+1729705385308	geckodriver	INFO	Listening on 127.0.0.1:56027
+1729705388201	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56028" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofile46DQmW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729705388933	Marionette	INFO	Marionette enabled
+1729705389224	Marionette	INFO	Listening on port 56040
+WebDriver BiDi listening on ws://127.0.0.1:56028
+Read port: 56040
+1729705389373	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729705392809	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1729705426137	Marionette	INFO	Stopped listening on port 56040
+Dynamically enable window occlusion 1
+1729705457950	geckodriver	INFO	Listening on 127.0.0.1:56107
+1729705460838	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56108" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofile09xp7b"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729705461444	Marionette	INFO	Marionette enabled
+1729705461566	Marionette	INFO	Listening on port 56119
+WebDriver BiDi listening on ws://127.0.0.1:56108
+Read port: 56119
+1729705461678	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729705465055	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1729705504928	Marionette	INFO	Stopped listening on port 56119
+Dynamically enable window occlusion 1

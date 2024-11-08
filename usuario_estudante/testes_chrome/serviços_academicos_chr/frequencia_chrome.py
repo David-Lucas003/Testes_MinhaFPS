@@ -7,9 +7,9 @@
 
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 import time
 
 
@@ -137,11 +137,13 @@ def clicar_filtro():
             EC.presence_of_element_located((By.XPATH, "//*[@id='filtroFrequenciaFacial']/span"))
         )
         local.click()
+        time.sleep(2)
         
         clicar_novamente = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//*[@id='filtroFrequenciaFacial']/span"))
         )
         clicar_novamente.click()
+        time.sleep(2)
         print("--------------------------------------------------")
         print("       Teste Filtrar local: Sucesso!!!            ")
         print("--------------------------------------------------")
@@ -287,16 +289,15 @@ def main():
     search_frequencia()
     clicar_filtro()
     scroll_frequencia()
-    order_frequencia()
-    scroll_again()
-    test_paginacao()
-    bottom_menu()
-    click_exit()
-    time.sleep(2.5)
+    #order_frequencia()
+    #scroll_again()
+    #test_paginacao()
+    #bottom_menu()
+    #click_exit()
     print("---------------------------------------------------")
     print("               FIM DA AUTOMAÇÃO!!!                 ")
     print("---------------------------------------------------")
-    exit()
+    #exit()
     input()
 
 main()

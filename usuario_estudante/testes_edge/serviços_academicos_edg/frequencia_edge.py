@@ -143,11 +143,13 @@ def clicar_filtro():
             EC.presence_of_element_located((By.XPATH, "//*[@id='filtroFrequenciaFacial']/span"))
         )
         local.click()
+        time.sleep(2)
         
         clicar_novamente = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//*[@id='filtroFrequenciaFacial']/span"))
         )
         clicar_novamente.click()
+        time.sleep(2)
         print("--------------------------------------------------")
         print("       Teste Filtrar local: Sucesso!!!            ")
         print("--------------------------------------------------")
@@ -298,7 +300,6 @@ def main():
     test_paginacao()
     bottom_menu()
     click_exit()
-    time.sleep(2.5)
     print("---------------------------------------------------")
     print("               FIM DA AUTOMAÇÃO!!!                 ")
     print("---------------------------------------------------")
