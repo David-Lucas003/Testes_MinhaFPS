@@ -1342,3 +1342,18 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
 1729705504928	Marionette	INFO	Stopped listening on port 56119
 Dynamically enable window occlusion 1
+1731067273726	geckodriver	INFO	Listening on 127.0.0.1:49801
+1731067276735	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49802" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DAVID~1.BAR\\AppData\\Local\\Temp\\rust_mozprofilemMriHJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731067277512	Marionette	INFO	Marionette enabled
+1731067277697	Marionette	INFO	Listening on port 49811
+WebDriver BiDi listening on ws://127.0.0.1:49802
+Read port: 49811
+1731067277831	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1731067281401	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sso.fps.edu.br."
+1731067321186	Marionette	INFO	Stopped listening on port 49811
+Dynamically enable window occlusion 1

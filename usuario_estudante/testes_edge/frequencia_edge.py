@@ -1,11 +1,3 @@
-# Inicialize o driver do Chrome usando o WebDriverManager
-#executable_path="C:/Users/david.barros/Documents/chromedriver_win64-125/chromedriver.exe"
-
-#cService=webdriver.ChromeService()
-#options = webdriver.ChromeOptions()
-#driver = webdriver.Chrome(service=cService, options=options)
-
-
 from selenium import webdriver 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -307,3 +299,4 @@ def main():
     input()
 
 main()
+       
